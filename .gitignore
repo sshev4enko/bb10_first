@@ -1,6 +1,8 @@
 # MY repository ignores
 *.h
 *.cpp
+!main.cpp
+tmp/
 #------------------------------------------------------------------------------
 
 # Compiled Object files
