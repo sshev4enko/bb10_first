@@ -1,0 +1,82 @@
+**********************************
+*  Git and GitHub for Beginners  *
+**********************************
+
+ GithHub
+=========
+> use EPAM-mail account (Sergii_Shevchenko@epam.com)
+	Username:	bb10epam
+	Email:		Sergii_Shevchenko@epam.com
+
+> test folder-proj
+	d:\Projects\BB\bb10_first\
+	SSH Git:	git@github.com:bb10epam/bb10_first.git
+
+> SOFTWARE:
+	msysgit				- Console Git-bash client for Win (https://code.google.com/p/msysgit/downloads/list)
+	TortoiseGit			- GUI Git client like TortoiseSVN (https://code.google.com/p/tortoisegit/)
+	PuTTY & PuTTYgen	- SSH client (http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.62-installer.exe)
+
+> ++Git
+	++ Ability to work from command line (Git Bash) & from GUI (TurtoiseGit)
+	
+> ++GitHub
+	++ Like a WebSVN - see diffs, files, commits online
+	++ Project Wiki
+	++ Issue tracking
+
+> QUESTIONS & TODO
+	?? how assign an issue to another person
+		- repo Settings -> Collabolators -> Add a friend
+	?? how add files (.extension) to ignore list
+	??
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Git
+=====
+HOWTO Ignore files:
+	add .gitignore file to your repository anywhere (the list of file extensions that will be ignored by Git)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Git cmd
+=========
+#git --version					- Git version
+#git help -a (--all)			- Prints all the available commands
+#git config --list				- Shows all defined Git options
+#git config --get user.name		- Get config param value <user.name>
+#git remote -v					- Shows REMOTE repository name and URLs
+	#git remote add origin https://github.com/try-git/try_git.git
+	#git remote show origin		- Show detailed info about remote server
+#git branch						- With no arguments, existing LOCAL branches are listed and the current branch will be highlighted with an asterisk.
+	#git branch <branch_name>	- Create new branch
+	#git branch -d <branch_name>			- Delete a branch (after the merge was done already)
+	#git branch -d --force <branch_name>	- Delete the branch that hasn't been merged yet
+#git merge <branch>				- Merge changes from <branch> to your current branch (Merge Conflicts can occur)
+#git status
+#git diff <file>
+	#git diff HEAD				- Diff of our most recent commit
+	#git diff --staged			- View the changes you staged for the next commit via #git add
+								  (the same as  #git diff --cached)	
+#git blame <file>				- Like #svn blame
+#git add <file>					- Add file contents to the index (stage a file for the next commit)
+#git reset <file>				- Unstage a file
+#git checkout -- <file>			- Undo/Revert changes back to how they were at the last commit
+#git checkout <branch>			- Switch between branches
+#git commit -a					- Commit with automatically staging files that already under version control (like  #git add & #git commit)
+#git push						- Updates remote refs using local refs (update GitHub repo with your local changes)
+	#git push <remote_server> <local_branch>
+	#git push origin master 	- Push your local changes to your public online repository
+								  (will push changes from the local master branch to the remote master branch.)
+								  // default local branch name is master
+	#git push -u origin master 	-  -u tells Git to remember the parameters, so that next time we can simply run #git push  and Git will know what to do.
+#git pull origin master			- Fetch from and merge with another repository or a local branch
+#git log						- Show commit logs
+	#git log --summary			-  ...and show the file names, extended info
+	#git log -4					- Show only specified number <4> of latest commits
+	#git log --stat				- Show commit statistic (like amount of changed files, how much lines were added or removed)
+	#git log --pretty=oneline	- Show each commit as one single line
+	#git log --graph			- ...branch history as a graph
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
